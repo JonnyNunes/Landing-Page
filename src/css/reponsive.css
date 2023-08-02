@@ -1,0 +1,14 @@
+@media screen and (max-width: 720px) {
+    body{
+        align-items: center;
+    }
+    
+    body::before{
+        background-image: url("../img/background-cell.jpg");
+    }
+
+    /* Estilo quando o cursor estiver sobre o botão */
+    footer #buttom:hover {
+        transform: scale(1.1) rotate(360deg);
+    }
+}

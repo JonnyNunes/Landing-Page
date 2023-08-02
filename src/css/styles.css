@@ -1,0 +1,88 @@
+@import url("animations.css");
+
+body{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    height: 100%;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+audio{
+    display: none;
+}
+
+header{
+    position: relative;
+    max-height: 256px;
+    max-width: 256px;
+    box-shadow: 0px 8px 8px rgb(141, 7, 119);
+    overflow: hidden;
+}
+
+header div.container div.carousel img{
+    height: 100%;
+    width: 100%;
+}
+
+div.rodape-buttom{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+footer #buttom{
+    border: none;
+    border-radius: 25%;
+    box-shadow: inset 0px 5px 15px black;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    width: 200px;
+    height: 50px;
+    background-color: #06477c;
+    transition: all .6s ease-in-out 0s;
+    cursor: pointer;
+}
+
+/* Estilo quando o cursor estiver sobre o botão */
+footer #buttom:hover {
+    transition: .6s;
+    transform: scale(1.2) rotate(360deg);
+    box-shadow: 0 0 60px rgb(18, 133, 108);
+    background: linear-gradient(to right,rgb(71, 35, 112), rgb(130, 10, 228));
+    color: rgb(224, 10, 243);
+    cursor: grab;
+    border: 2px solid rgb(227, 13, 247);
+}
+
+.container{
+    max-width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.carousel{
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    align-self: baseline;
+    height: 100%;
+    width: 100%;
+    animation: carouselAnim 10s linear infinite;
+}
