@@ -1,0 +1,14 @@
+@keyframes seta-cima-anim {
+    50%{
+        transform: translateY(-18%);
+    }
+}
+
+@keyframes mover-seta-esquerda-direita{
+    50%{
+        transform: translateX(-25%);
+    }
+    50%{
+        transform: 0%;
+    }
+}

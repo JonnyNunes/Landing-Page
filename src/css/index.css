@@ -1,0 +1,210 @@
+@import url("variables.css");
+@import url("animation.css");
+
+body{
+    background: linear-gradient(90deg, #c06028 0%, #7a3f0e 100%);
+    padding: 0 1rem;
+}
+
+header, 
+section.hero-section, 
+section.courses-section, 
+footer{
+    border-color: var(--color-black);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+}
+
+header img{
+    display: block;
+    margin: 1rem auto;
+    max-width: 125px;
+    max-height: 125px;
+}
+
+img.logo{
+    border-radius: 10%;
+}
+
+header nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem auto 0;
+}
+
+header nav a{
+    color: var(--color-black);
+    font-size: 1.25rem;
+    padding: .5rem;
+    text-decoration: none;
+}
+
+header nav a:nth-child(2n - 1){
+    text-align: right;
+}
+
+.button{
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    color: var(--color-black);
+    display: block;
+    font-size: 1.25rem;
+    padding: .75rem 1rem;
+    max-width: 12rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+section.hero-section{
+    padding-bottom: 18rem;
+}
+
+section.hero-section img{
+    display: block;
+    margin: 1.25rem auto;
+    border-radius: 10%;
+    max-width: 256px;
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 140%;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+section.hero-section p{
+    font-size: 1rem;
+    padding-right: 1.25rem;
+}
+
+section.hero-section a.button{
+    position: relative;
+}
+
+section.hero-section a.button::after{
+    content: "";
+    background: url("../img/seta-cima.png");
+    position: absolute;
+    top: 5rem;
+    right: 4rem;
+    animation: seta-cima-anim 1s ease-in-out infinite;
+    height: 100%;
+    width: 128px;
+}
+
+.decoration{
+    display: block; /*Quebra linha*/
+    position: relative;
+}
+
+.decoration::after{
+    content: "";
+    background: url("../img/atencao.png");
+    position: absolute;
+    top: -4.25rem;
+    right: -.2rem;
+    transform: rotate(0deg);
+    width: 128px;
+    height: 90px;
+}
+
+section.courses-section{
+    padding-bottom: 8rem;
+}
+
+section.courses-section 
+div.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-top: -6rem;
+    margin-bottom: 4rem;
+}
+
+.card{
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-black);
+    box-shadow: 6px 6px 0 var(--color-black);
+    max-width: 15rem;
+    max-height: 470px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.card:nth-child(2n){
+    align-self: flex-end;
+    background-color: var(--color-secudary);
+}
+
+.card strong{
+    display: block; /*Quebrar linha*/
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.card a{
+    display: block;
+    margin: 1rem 0 0 auto;
+    width: fit-content;
+    height: 100px;
+}
+
+.card p{
+    font-size: 16px;
+}
+
+.card a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.card img{
+    border-radius: 50px;
+    width: 135px;
+    height: 135px;
+    box-shadow: 6px 6px 0 var(--color-black);
+}
+
+.card a img:hover{
+    transform: scale(1.2);
+    position: relative;
+    animation: mover-seta-esquerda-direita .8s linear infinite;
+}
+
+footer div img{
+    max-width: 150px;
+    max-height: 150px;
+}
+
+footer{
+    border-bottom: 0;
+    padding: 2rem 1.75rem 4rem;
+}
+
+footer nav a{
+    display: block;
+    padding-left: 0;
+    padding-bottom: .5rem;
+}
+
+.formulario label{
+    display: block;
+    font-size: 1.5rem;
+}
+
+.formulario input{
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    font-size: 1.25rem;
+    padding: .5rem;
+    width: 100%;
+}
